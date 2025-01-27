@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-# evaluation.py
-# This script loads a trained model (e.g., svm_model.pkl or rf_model.pkl),
-# evaluates it on the testing set (testing.csv), prints a confusion matrix
-# in the console, and saves a colored confusion matrix as a PNG file.
-# It also prints a variety of evaluation metrics (accuracy, precision, recall, F1).
 
 import sys
 import pandas as pd

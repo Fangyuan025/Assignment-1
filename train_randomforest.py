@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# train_randomforest.py
-# This script trains a Random Forest classifier (using TF-IDF features) on the training set (training.csv)
-# and saves the trained model to a file (rf_model.pkl).
 
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer

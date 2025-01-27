@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-# visualize.py
-# This script plots figures (counts & proportions) for:
-# 1) the combined preprocessed dataset (tweets_preprocessed.csv) -- optional if you'd like to keep it
-# 2) the training set (training.csv)
-# 3) the testing set (testing.csv)
-#
-# Note: If you'd like to remove the original dataset's plotting, feel free to comment or delete that part.
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -40,8 +31,7 @@ def plot_counts_and_proportions(df, dataset_name, axes_pair):
 
 
 def main():
-    # 1. Read the processed (combined) dataset (optional)
-    #    If you'd rather skip plotting the combined data, you can comment this out.
+    # 1. Read the processed (combined) dataset
     df_combined = pd.read_csv("tweets_preprocessed.csv", encoding="utf-8")
 
     # 2. Read the training and testing sets
@@ -49,8 +39,6 @@ def main():
     df_test = pd.read_csv("testing.csv", encoding="utf-8")
 
     # 3. Set up the figure with subplots
-    #    We'll create 2 rows x 2 columns for training sets, then 2 rows x 2 columns for testing sets
-    #    Alternatively, we can do a single 2x2 with training (top) and testing (bottom).
     fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 8))
 
     # 4. Plot: Training set (top row), Testing set (bottom row)
@@ -61,14 +49,6 @@ def main():
 
     plt.tight_layout()
     plt.show()
-
-    # --- If you'd also like to plot the combined data in a separate figure, uncomment below: ---
-    """
-    fig_combined, axes_combined = plt.subplots(nrows=1, ncols=2, figsize=(10, 5))
-    plot_counts_and_proportions(df_combined, "Combined (All Data)", (axes_combined[0], axes_combined[1]))
-    plt.tight_layout()
-    plt.show()
-    """
 
 
 if __name__ == "__main__":

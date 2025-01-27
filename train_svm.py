@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# train_svm.py
-# This script trains an SVM classifier (using TF-IDF features) on the training set (training.csv)
-# and saves the trained model to a file (svm_model.pkl).
 
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
