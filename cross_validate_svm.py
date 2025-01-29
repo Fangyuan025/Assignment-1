@@ -61,7 +61,7 @@ def main():
         "recall_macro": df_cv["recall_macro"].mean(),
         "f1_macro": df_cv["f1_macro"].mean()
     }
-    df_cv = df_cv.append(mean_row, ignore_index=True)
+    df_cv = pd.concat([df_cv, pd.DataFrame([mean_row])], ignore_index=True)
 
     # 6. Export cross-validation results to CSV
     cv_csv_filename = "cv_results_svm.csv"
